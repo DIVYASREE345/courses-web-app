@@ -1,20 +1,45 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>courses web-app</title>
 
-<head>
-  <meta charset="utf-8" />
-  <title>courses web-app</title>
+    <link rel="stylesheet" href="./style.css" />
 
-  <link rel="stylesheet" href="./style.css">
+    <script type="module">
+      import { init } from "./app/init.js";
+      window.onload = init;
+    </script>
+  </head>
 
-  <script type="module">
-    import { init } from './app/init.js'
-    window.onload = init;
-  </script>
-</head>
+  <body>
+    <p id="heading">Web Courses</p>
 
-<body>
+    <div class="container">
+      <img src="./app/images/side.png" class="side-img" />
 
-</body>
+      <div class="form-add">
+        <form>
+          <fieldset>
+            <legend>Add New Course</legend>
+            <label for="field1"
+              ><span>Course Name <span class="required">*</span></span
+              ><input type="text" class="input-field" name="field1" value=""
+            /></label>
+            <label for="field2"
+              ><span>Duration <span class="required">*</span></span
+              ><input type="text" class="input-field" name="field2" value=""
+            /></label>
+            <label for="field3"
+              ><span>Description <span class="required">*</span></span
+              ><textarea name="field6" class="textarea-field"></textarea>
+            </label>
+            <label><span> </span><input type="submit" value="Submit" /></label>
+          </fieldset>
+        </form>
+      </div>
+    </div>
 
+    <button id="get-course">Open Courses</button>
+  </body>
 </html>
