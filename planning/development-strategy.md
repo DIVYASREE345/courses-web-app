@@ -9,6 +9,14 @@
 Refactoring the project RESTFull API with client, server connection.
 ---
 
+
+## Screenshot
+<p align="center">
+<img src="/planning/screenshot.PNG" alt="screenshot" with="600">
+</p>
+
+---
+
 ## 0.Setup
 
 _A User can see the initial repository and live demo_
@@ -27,14 +35,9 @@ _A User can see the initial repository and live demo_
 - databas.JSON 
 - contains course object.
 
-## Screenshot
-<p align="center">
-<img src="/planning/screenshot.PNG" alt="screenshot" with="600">
-</p>
-
-
 
 ---
+
 ## 2. Get a single course
 
 > Assigned to _Divya_
