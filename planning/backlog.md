@@ -19,7 +19,7 @@ A collection of user stories you can choose from. Stories inside of each priorit
 
 > these will complete user experience, but are not nessecery.
 
-- [X]As a user I want to see who entered, updated and deleted data for each course.
+- [X] As a user I want to see who entered, updated and deleted data for each course.
 
 ## Could-Haves
 
