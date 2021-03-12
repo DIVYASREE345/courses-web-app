@@ -7,6 +7,15 @@ const Joi = require('joi');
 const config = require('../config');
 const DATA_DIR = path.join(__dirname, '..', 'data', 'courses.json');
 
+function validateCourse(course) {
+  const schema = Joi.object({
+    course: Joi.string().min(3).required(),
+    duration: Joi.string().required(),
+    description: Joi.string().required(),
+  });
+  return schema.validate(course);
+}
+
 const controllers = {
   hello: (req, res) => {
     res.json({ api: 'courses!' });
@@ -107,6 +116,8 @@ const controllers = {
       const course = {
         id: Date.now(),
         course: req.body.course,
+        duration: req.body.duration,
+        description: req.body.description,
       };
 
       dataFromJson.push(course);
