@@ -1,28 +1,26 @@
 [
-
-  {
-    "id": 2,
-    "course": "new data from put",
-    "duration": "5",
-    "description": "first fullstack project"
-  },
-  {
-    "id": 3,
-    "course": "node-js",
-    "duration": "5",
-    "description": "first fullstack project"
-  },
-  {
-    "id": 4,
-    "course": "mongo-db",
-    "duration": "5",
-    "description": "first fullstack project"
-  },
-  {
-    "id": 5,
-    "course": "react-js",
-    "duration": "5",
-    "description": "first fullstack project"
-  }
-
+    {
+        "id": 2,
+        "course": "new data from put",
+        "duration": "5",
+        "description": "first fullstack project"
+    },
+    {
+        "id": 3,
+        "course": "node-js",
+        "duration": "5",
+        "description": "first fullstack project"
+    },
+    {
+        "id": 4,
+        "course": "mongo-db",
+        "duration": "5",
+        "description": "first fullstack project"
+    },
+    {
+        "id": 5,
+        "course": "react-js",
+        "duration": "5",
+        "description": "first fullstack project"
+    }
 ]
