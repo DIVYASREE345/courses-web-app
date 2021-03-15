@@ -1,5 +1,5 @@
 'use strict';
-
+import {getSingleCourse, deleteCourse} from '../app/init.js'
 export class Course {
     constructor(id, name, duration, description){
         this.id = id,
@@ -33,13 +33,13 @@ export class Course {
 
 
         const editButton = document.createElement("button");
-        // editButton.className = 'item-text-title';
         editButton.innerHTML = `Edit`;
+        editButton.addEventListener('click', (e) => getSingleCourse(e, this.id))
         listItem.appendChild(editButton);
 
         const deleteButton = document.createElement("button");
-        //deleteButton.className = 'item-text-title';
         deleteButton.innerHTML = `Delete`;
+        deleteButton.addEventListener('click', (e) => deleteCourse(e, this.id))
         listItem.appendChild(deleteButton);
         
 
