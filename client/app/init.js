@@ -20,4 +20,27 @@ const getCourse = async () => {
   });
 };
 
+
 document.getElementById("get-course").addEventListener("click", () => getCourse());
+
+const createCourse = async (e) => {
+  e.preventDefault();
+  const courseName = document.getElementsByName("field1")[0].value
+  const courseDuration = document.getElementsByName("field2")[0].value
+  const courseDescription = document.getElementsByName("field6")[0].value
+
+  const newCourse = {
+    course:courseName,
+    duration:courseDuration,
+    description:courseDescription
+  }
+  await fetch(`${url}/api/courses`,{
+    method: "POST",
+    body: JSON.stringify(newCourse),
+    headers:{
+      'Content-Type': 'application/json'
+  }
+  });
+}
+
+document.querySelectorAll("input[type=submit]")[0].addEventListener("click", (e) => createCourse(e));
