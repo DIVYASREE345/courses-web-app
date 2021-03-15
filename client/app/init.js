@@ -40,6 +40,7 @@ const createCourse = async () => {
       "Content-Type": "application/json",
     },
   });
+  
 };
 
 export const getSingleCourse = async (e, id) => {
@@ -80,10 +81,10 @@ export const deleteCourse = async (e, id) => {
 };
 const chooseMethod = (e) => {
   if (document.querySelectorAll("input[type=submit]")[0].value !== "Update") {
-    alert("Course Created");
+    alert("Course Created click Open course to see the new course ");
     createCourse(e);
   } else {
-    alert("Course Updated");
+    alert("Course Updated click Open Course to see the updated course");
     updateCourse(e, currentId);
   }
 };
