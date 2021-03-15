@@ -64,8 +64,6 @@ const controllers = {
 
       //Update course
       updateCourse.course = req.body.course;
-      updateCourse.duration = req.body.duration;
-      updateCourse.description = req.body.description;
       res.send(updateCourse); //Return the update course
       const updatedCourses = JSON.stringify(courses, null, 2);
       fs.writeFile("./data/courses.json", updatedCourses, (err) => {
