@@ -36,6 +36,7 @@ export class Course {
         // editButton.className = 'item-text-title';
         editButton.innerHTML = `Edit`;
         editButton.addEventListener('click', (e)=>getSingleCourse(e, this.id))
+
         
         listItem.appendChild(editButton);
 
