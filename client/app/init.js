@@ -86,6 +86,7 @@ const chooseMethod = (e) => {
   } else {
     alert("Course Updated click Open Course to see the updated course");
     updateCourse(e, currentId);
+    window.location.reload();
   }
 };
 document
