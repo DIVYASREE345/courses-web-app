@@ -1,11 +1,11 @@
 "use strict";
 import { Course } from "../classes/courses.js";
 const mainDiv = document.querySelector(".items");
-const url = "http://localhost:8080";
+//const url = "http://localhost:8080";
 let currentId;
 export const getCourse = async () => {
   //e.preventDefault();
-  const res = await fetch(`${url}/api/courses`);
+  const res = await fetch('/api/courses');
   const courses = await res.json();
   mainDiv.innerHTML = "";
   courses.map((course) => {
@@ -33,7 +33,7 @@ const createCourse = async () => {
     duration: courseDuration,
     description: courseDescription,
   };
-  await fetch(`${url}/api/courses`, {
+  await fetch('/api/courses', {
     method: "POST",
     body: JSON.stringify(newCourse),
     headers: {
@@ -44,7 +44,7 @@ const createCourse = async () => {
 };
 
 export const getSingleCourse = async (e, id) => {
-  const res = await fetch(`${url}/api/courses/${id}`);
+  const res = await fetch(`/api/courses/${id}`);
   const course = await res.json();
   document.getElementsByName("field1")[0].value = course.course;
   document.getElementsByName("field2")[0].value = course.duration;
@@ -62,7 +62,7 @@ export const updateCourse = async (e, id) => {
     duration: courseDuration,
     description: courseDescription,
   };
-  await fetch(`${url}/api/courses/${id}`, {
+  await fetch(`/api/courses/${id}`, {
     method: "PUT",
     body: JSON.stringify(newCourse),
     headers: {
@@ -72,7 +72,7 @@ export const updateCourse = async (e, id) => {
 };
 export const deleteCourse = async (e, id) => {
   e.preventDefault();
-  await fetch(`${url}/api/courses/${id}`, {
+  await fetch(`/api/courses/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
