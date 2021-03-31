@@ -92,7 +92,7 @@ body {
 .form-add input[type="submit"],
 .form-add input[type="button"] {
   background: #eb3b88;
-  border: 1px solid #c94a81;
+  border: 1px solid rgb(201, 74, 129);
   padding: 5px 15px 5px 15px;
   color: #ffcbe2;
   box-shadow: inset -1px -1px 3px #ff62a7;
@@ -111,9 +111,58 @@ body {
 }
 
 #get-course {
-  color: rgb(48, 184, 109);
+  color: #eb3b88;
   font-size: 33px;
   border-radius: 30px;
   margin-top: 5rem;
   margin-left: 20rem;
+}
+ul {
+ display: grid;
+  width: 80%;
+  margin: 30px auto;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  
+}
+li {
+  list-style: none;
+}
+
+.item{
+  background: #fff4f4;
+
+  
+
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "header header"
+                       "aside icon"
+                       "aside icon";
+  
+  text-align: center;
+  width:500px;
+}
+.item-text-title{
+  grid-area:header;
+  text-decoration: underline;
+  color: #eb3b88;
+  
+}
+
+.icon {
+  
+  
+  padding: 10px;
+  color:rgb(201, 74, 129);
+  
+  width: fit-content;
+  margin: 5px auto;
+  
+
+}
+.item-description, .item-duration {
+  color: #ff62a7;
+  
 }
